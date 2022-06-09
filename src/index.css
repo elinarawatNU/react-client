@@ -138,16 +138,36 @@ main {
 }
 
 #posts button {
+    border: 1px;
+    border-color: #999;
+    cursor: pointer;
     background: none;
     color: inherit;
-	border: none;
-    font: inherit;
-	cursor: pointer;
-	outline: inherit;
+}
+
+#posts .far.fa-heart {
+    font-size: larger;
 }
 
 #posts .fas.fa-heart {
     color: red;
+    font-size: larger;
+}
+
+#posts .far.fa-bookmark {
+    font-size: larger;
+}
+
+#posts .fas.fa-bookmark {
+    font-size: larger;
+}
+
+#posts .far.fa-comment {
+    font-size: larger;
+}
+
+#posts .far.fa-paper-plane {
+    font-size: larger;
 }
 
 #posts .save-post {
@@ -212,6 +232,14 @@ main {
     padding-right: 10px;
     color: #135ad4;
 }
+
+/* #posts .postingcomment-button {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 10px;
+    color: #135ad4;
+} */
 
 /* STORIES */
 

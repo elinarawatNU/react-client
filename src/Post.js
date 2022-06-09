@@ -2,6 +2,8 @@ import React from 'react';
 import { getHeaders } from './utils';
 import LikeButton from './LikeButton';
 import BookmarkButton from './BookmarkButton';
+import AddComment from './AddComment';
+import Comment from './Comment';
 
 
 class Post extends React.Component {
@@ -71,20 +73,14 @@ class Post extends React.Component {
 
                     <div className="caption-comments-postdate">
                         <h5><span className="caption-username">{post.user.username}</span>{post.caption}<span className="caption-more"><button>more</button></span></h5>
-                        {/* ${ displayComments(post) } */}
+                        <Comment comments={post.comments} />
                         <h5 className="post-date">{post.display_time}</h5>
                     </div>
 
                     <div className="add-comment">
-                        <div className="comment-smiley">
-                            <i className="far fa-smile"></i>
-                            <h5 className="adding-comment">Add a comment...</h5>
-                            {/* <input class="adding-comment" type="text" placeholder="Add a comment..."> */}
-                        </div>
-                        <div className="post-comment-action">
-                            {/* <h5><button onclick="addComment();">Post</button></h5> */}
-                            <h5><button>Post</button></h5>
-                        </div>
+                        <AddComment
+                            postId={post.id}
+                            refreshPost={this.refreshPostDataFromServer} />
                     </div>
 
                 </div>

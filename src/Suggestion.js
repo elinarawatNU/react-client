@@ -37,7 +37,7 @@ class Suggestion extends React.Component {
         console.log('create follow:', url);
         fetch(url, {
                 headers: getHeaders(),
-                method: "POST",
+                method: 'POST',
                 body: JSON.stringify(postData)
             }).then(response => response.json())
             .then(data => {
@@ -75,7 +75,8 @@ class Suggestion extends React.Component {
 
     render () {
         const suggestion = this.state.suggestion;
-        const followClass = (this.state.followId ? 'unfollow' : 'follow');
+        const follow_Id = this.state.followId;
+        const followClass = (follow_Id ? 'unfollow' : 'follow');
         console.log("suggestion-test",suggestion)
         return (
             <div className="suggestion">
@@ -87,6 +88,8 @@ class Suggestion extends React.Component {
                 <div>
                     <button
                         aria-label="Follow/Unfollow"
+                        aria-checked={follow_Id ? true : false}
+                        role="switch"
                         className="follow"
                         onClick={this.toggleFollow}>{followClass}</button>
                 </div>

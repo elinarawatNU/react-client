@@ -69,10 +69,12 @@ class LikeButton extends React.Component {
             
             <button 
                 onClick={this.toggleLike}
-                aria-label="Like/Unlike">
+                aria-label="Like/Unlike"
+                aria-checked={likeId ? true : false}
+                role="switch">
                 <i className={heartClass}></i>
             </button>
-               
+            
         )
     }
 

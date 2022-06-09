@@ -33,7 +33,7 @@ class Suggestions extends React.Component {
         const profile = this.state.profile;
         return (
             <div id="suggestions">
-                <p class="suggestions-for-you">Suggestions for you</p>
+                <p className="suggestions-for-you">Suggestions for you</p>
                 <div>
                     {
                         this.state.suggestions.map(suggestion => {

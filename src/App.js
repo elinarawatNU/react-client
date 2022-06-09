@@ -12,23 +12,10 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         // issue fetch request to /api/profile endpoint:
-        // this.getProfileFromServer();
         this.state = {
             user: {}
         }
     }
-
-    // getProfileFromServer() { 
-    //     fetch('/api/profile', {
-    //         headers: getHeaders()
-    //     }).then(response => response.json())
-    //     .then(data => {
-    //         console.log(data);
-    //         this.setState({
-    //             user: data
-    //         })
-    //     })
-    // }
 
     render () {
         return (
